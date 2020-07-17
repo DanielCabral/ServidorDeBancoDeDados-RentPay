@@ -26,6 +26,13 @@ public class MysqlCon{
 	      //st.close();
 		return rs;		
 	}
+	
+	public Connection getConexao() {
+		return conn;
+	}
+	
+
+	
 	public static void main(String args[]) throws SQLException{  
 	 	String userName = "rentpay";
 	 	String password = "1234";
