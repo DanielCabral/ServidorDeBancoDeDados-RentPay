@@ -7,7 +7,7 @@ public class Categoria implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private long id;
+	private int id;
 	private String nome;
 	private String descricao;
 	
@@ -15,13 +15,13 @@ public class Categoria implements Serializable{
 		super();
 	}
 	
-	public Categoria(long id, String nome, String descricao) {
+	public Categoria(int id, String nome, String descricao) {
 		this.id = id;
 		this.nome = nome;
 		this.descricao = descricao;
 	}
 	
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 	public String getNome() {

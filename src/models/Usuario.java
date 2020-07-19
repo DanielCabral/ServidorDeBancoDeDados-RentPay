@@ -8,7 +8,7 @@ public class Usuario implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private long id;
+	private int id;
 	private String cpf;
 	private String telefone;
 	private String nome;
@@ -23,7 +23,7 @@ public class Usuario implements Serializable{
      super();
     }
 	
-	public Usuario(long id, String cpf, String telefone, String nome, String email, String dataDeNascimento,
+	public Usuario(int id, String cpf, String telefone, String nome, String email, String dataDeNascimento,
 			String senha, Endereco endereco) {
 		this.endereco = endereco;
 		this.id = id;
@@ -35,7 +35,7 @@ public class Usuario implements Serializable{
 		this.senha = senha;
 	}
 	
-	public Usuario(long id, String cpf, String telefone, String nome, String email, String dataDeNascimento,
+	public Usuario(int id, String cpf, String telefone, String nome, String email, String dataDeNascimento,
 			String senha) {
 		this.id = id;
 		this.cpf = cpf;
@@ -46,7 +46,7 @@ public class Usuario implements Serializable{
 		this.senha = senha;
 	}
 	
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 	public String getCpf() {
