@@ -27,7 +27,7 @@ public class Servidor implements InterfaceDoServidor, Serializable{
 	@Override
 	public boolean logar(String email, String password) throws RemoteException, SQLException {
 		try {
-		String query = "SELECT count(*) as qtd FROM usuario where nome= \""+email+"\" and senha = \""+password+"\"";
+		String query = "SELECT count(*) as qtd FROM usuario where email= \""+email+"\" and senha = \""+password+"\"";
 		System.out.println(query);
 	      ResultSet rs = conexao.executarQueryNoBanco(query);
 	      rs.next();
@@ -240,7 +240,7 @@ public class Servidor implements InterfaceDoServidor, Serializable{
 	      String cpf = rs.getString("cpf");
 	      String telefone = rs.getString("telefone");
 	      String nome = rs.getString("nome");
-	      String email = rs.getString("email");
+	      String email = rs.getString("e_mail");
 	      String dataDeNascimento = rs.getString("data_de_nascimento");
 	      String senha = rs.getString("senha");
 	      Endereco endereco = dadosDeEndereco(id_user);
